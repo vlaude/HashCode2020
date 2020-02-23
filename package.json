@@ -1,26 +1,33 @@
 {
-  "name": "hashcode2020",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "start": "tsnd index.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/vlaude/HashCode2020.git"
-  },
-  "author": "Vincent Laude",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/vlaude/HashCode2020/issues"
-  },
-  "homepage": "https://github.com/vlaude/HashCode2020#readme",
-  "dependencies": {
-    "ts-node-dev": "^1.0.0-pre.44"
-  },
-  "devDependencies": {
-    "typescript": "^3.8.2"
-  }
+    "name": "hashcode2020",
+    "version": "1.0.0",
+    "description": "",
+    "main": "src/index.ts",
+    "scripts": {
+        "start": "tsnd src/index.ts",
+        "start:dev": "tsnd --respawn --transpileOnly src/index.ts",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/vlaude/HashCode2020.git"
+    },
+    "author": "Vincent Laude",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/vlaude/HashCode2020/issues"
+    },
+    "homepage": "https://github.com/vlaude/HashCode2020#readme",
+    "dependencies": {
+        "event-stream": "^4.0.1",
+        "ts-node-dev": "^1.0.0-pre.44"
+    },
+    "devDependencies": {
+        "@types/event-stream": "^3.3.34",
+        "@types/node": "^13.7.4",
+        "@vlaude/prettier-config": "^1.1.0",
+        "prettier": "^1.19.1",
+        "typescript": "^3.8.2"
+    },
+    "prettier": "@vlaude/prettier-config"
 }
