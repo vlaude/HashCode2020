@@ -1,7 +1,7 @@
 import { createWriteStream, writeFileSync } from 'fs';
 
-import { LibraryResult } from './library-result.interface';
-import { Book } from './book.model';
+import { LibraryResult } from './models/library-result.interface';
+import { Book } from './models/book.model';
 
 export class ResultHandler {
     books: Book[];

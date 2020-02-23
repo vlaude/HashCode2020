@@ -11,4 +11,8 @@ export class Scanner {
         this.libraries = libraries;
         this.books = books;
     }
+
+    sortLibraries() {
+        this.libraries.forEach(library => { library.sort() });
+    }
 }

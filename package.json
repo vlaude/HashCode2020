@@ -5,6 +5,7 @@
     "main": "src/index.ts",
     "scripts": {
         "start": "tsnd src/index.ts",
+        "start:a": "tsnd src/index.ts a",
         "start:dev": "tsnd --respawn --transpileOnly src/index.ts",
         "test": "echo \"Error: no test specified\" && exit 1"
     },

@@ -29,7 +29,7 @@ export class InputReader {
     }
 
     async read(): Promise<Scanner> {
-        console.log('Scanning the file ...');
+        console.log('👀 Scanning the file ...');
         return new Promise((resolve, reject) => {
             const stream = createReadStream(this.filePath)
                 .pipe(split())
@@ -66,7 +66,7 @@ export class InputReader {
                 .on('end', () => {
                     this.currentLine = 0;
                     const scanner = new Scanner(this.daysForScanning, this.libraries, this.books);
-                    console.log('File successfully scanned.');
+                    console.log('👍 File successfully scanned.');
                     resolve(scanner);
                 });
         });
@@ -96,7 +96,9 @@ export class InputReader {
 
         const firstLineData = lines[0].split(' ');
         const secondLineData = lines[1].split(' ');
-        const libBooks = books.filter(book => secondLineData.find(bookIndex => Number(bookIndex) === book.index));
+        // const libBooks = books.filter(book => secondLineData.find(bookIndex => Number(bookIndex) === book.index));
+        // WARNING: Les instances des books dans les libs ne sont pas les mêmes que dans le Scanner.
+        const libBooks = secondLineData.map(data => new Book(Number(data), books[Number(data)].score));
         return new Library(nextIndex, Number(firstLineData[1]), Number(firstLineData[2]), libBooks);
     }
 }
