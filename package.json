@@ -1,0 +1,26 @@
+{
+  "name": "hashcode2020",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsnd index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlaude/HashCode2020.git"
+  },
+  "author": "Vincent Laude",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlaude/HashCode2020/issues"
+  },
+  "homepage": "https://github.com/vlaude/HashCode2020#readme",
+  "dependencies": {
+    "ts-node-dev": "^1.0.0-pre.44"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.2"
+  }
+}
